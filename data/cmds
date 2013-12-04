@@ -1,0 +1,4 @@
+#!bin/bash
+
+# Count words in file news_formatted.txt 
+cat news_formatted.txt | sed 's|[,.]||g' | tr ' ' '\n' | sort | uniq -c | awk ' { t = ;  = ;  = t; print; } ' | tail -n +3 | head
