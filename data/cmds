@@ -2,3 +2,5 @@
 
 # Count words in file news_formatted.txt 
 cat news_formatted.txt | sed 's|[,.]||g' | tr ' ' '\n' | sort | uniq -c | awk ' { t = ;  = ;  = t; print; } ' | tail -n +3 | head
+# Merge columns from different files to a new file
+paste docs.txt stories.txt | awk '{print $1,$2}' > doc2stories.txt
