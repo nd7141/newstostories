@@ -10,8 +10,8 @@ documents = [datetime.datetime.strptime(doc, '%H:%M %d.%m.%Y').\
 
 sorted_docs = [i for i in sorted(enumerate(documents), key=lambda x:x[1])]
 
-with open('sorted_time_stamps.txt','w') as f:
+with open('sorted_time_stamps2.txt','w') as f:
     for doc in sorted_docs:
-        f.write(str(doc[0])+' '+doc[1]+'\n')
+        f.write(str(doc[0]+1)+'\n')
 
         
